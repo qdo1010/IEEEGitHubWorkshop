@@ -13,7 +13,6 @@ LINKER   = g++ -o
 # # linking flags here
 LFLAGS   = -I. -lm
 
-opencv = `pkg-config opencv --cflags --libs`
 
 #
 # # change these to set the proper directories where each files shoould be
@@ -32,7 +31,7 @@ LIB =
 #
 #
 $(BINDIR)/$(TARGET): $(OBJECTS)
-	@ $(LINKER) $@ $(LFLAGS) $(OBJECTS) $(INC) $(opencv) $(CFLAGS)
+	@ $(LINKER) $@ $(LFLAGS) $(OBJECTS) $(INC) $(CFLAGS)
 	@ echo "Linking complete!"
 #
 $(OBJECTS): $(OBJDIR)/%.o : $(SRCDIR)/%.cpp
