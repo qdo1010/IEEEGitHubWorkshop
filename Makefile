@@ -11,7 +11,7 @@ CFLAGS   = -std=c++11
 #
 LINKER   = g++ -o
 # # linking flags here
-LFLAGS   = -I. -lm -framework accelerate
+LFLAGS   = -I. -lm
 
 opencv = `pkg-config opencv --cflags --libs`
 
@@ -27,7 +27,7 @@ SOURCES  := $(wildcard $(SRCDIR)/*.cpp)
 INCLUDES := $(wildcard $(INCDIR)/*.h)
 OBJECTS  := $(SOURCES:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 rm       = rm -f
-INC = -I ./include/ -I ./include/linalg/ -I./include/decomp/ -I./include/dictLearn/ -I./include/prox/
+INC = -I ./include/
 LIB =
 #
 #
